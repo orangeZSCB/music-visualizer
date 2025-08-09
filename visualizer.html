@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频歌词可视化工具 (已修复)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="settings-panel">
+        <div class="settings-content">
+            <h2>设置</h2>
+            <p>请选择本地的 MP3 和 LRC 文件。</p>
+            
+            <label for="mp3-input">MP3 音频文件:</label>
+            <input type="file" id="mp3-input" accept=".mp3">
+
+            <label for="lrc-input">LRC 歌词文件:</label>
+            <input type="file" id="lrc-input" accept=".lrc, .txt">
+
+            <label for="font-url-input">自定义字体链接 (可选):</label>
+            <input type="text" id="font-url-input" placeholder="例如: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap">
+            <small>请粘贴来自 Google Fonts 等的 CSS 链接。</small>
+
+            <button id="start-btn">开始播放</button>
+        </div>
+        <button id="toggle-settings-btn" title="收起/展开设置面板">&lt;</button>
+    </div>
+
+    <div id="visualizer-container">
+        <div id="circle"></div>
+        <p id="lyrics">等待加载歌词...</p>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
